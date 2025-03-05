@@ -1,5 +1,6 @@
 import folium
 from folium.plugins import MarkerCluster
+import os
 
 # Create base map centered on Seoul
 map = folium.Map(location=[37.5665, 126.9780], zoom_start=11)
@@ -28,4 +29,4 @@ for loc in locations:
 marker_cluster.add_to(map)
 
 # Save the map
-map.save('seoul_clusters.html')
+map.save(os.path.join('data', 'map_cluster_sample.html'))

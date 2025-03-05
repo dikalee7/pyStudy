@@ -1,5 +1,6 @@
 import folium
 import pandas as pd
+import os
 
 # 서울시 주요 관광지 데이터
 locations = {
@@ -23,4 +24,4 @@ for idx, row in df.iterrows():
     ).add_to(seoul_map)
 
 # 지도 저장
-seoul_map.save('seoul_tourist_spots.html')
+seoul_map.save(os.path.join('data', 'map_sample.html'))
